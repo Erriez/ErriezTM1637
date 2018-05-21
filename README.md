@@ -32,7 +32,7 @@ The following TM1637 pins should be connected to LED's and buttons in a matrix:
 
 ### Pins
 
-| Pin  | TM1638 | Arduino UNO / Nano / Pro Micro / Mega2560 / Leonardo | WeMos D1 & R2 / Node MCU | WeMos LOLIN32 |
+| Pin  | TM1637 | Arduino UNO / Nano / Pro Micro / Mega2560 / Leonardo | WeMos D1 & R2 / Node MCU | WeMos LOLIN32 |
 | :--: | :----: | :--------------------------------------------------: | :----------------------: | :-----------: |
 |  1   |  VCC   |                     5V (or 3.3V)                     |           GND            |      GND      |
 |  2   |  GND   |                         GND                          |           3V3            |      3V3      |
@@ -67,7 +67,7 @@ The TM1637 communicates with a MCU serial by using two wires:
 #define TM1637_DIO_PIN   3
 
 // Create tm1637 object
-TM1638 tm1637(TM1637_CLK_PIN, TM1638_DIO_PIN);
+TM1637 tm1637(TM1637_CLK_PIN, TM1637_DIO_PIN);
 
 void setup()
 {
@@ -114,7 +114,7 @@ tm1637.writeData(0x01, 0x01);
 // Creat buffer with LED's
 uint8_t buf[] = { 0b10000110, 0b00111111, 0b00111111, 0b00111111, 0b00111111, 0b00111111};
 
-// Write buffer to TM1638
+// Write buffer to TM1637
 tm1637.writeData(0x00, buf, sizeof(buf));
 ```
 
@@ -122,7 +122,7 @@ tm1637.writeData(0x00, buf, sizeof(buf));
 
 The library uses optimized pin control for AVR targets. Other targets uses the default digitalRead() and digitalWrite() pin control functions.
 
-Output [Benchmark](https://github.com/Erriez/ErriezTM1638/blob/master/examples/Benchmark/Benchmark.ino) example:
+Output [Benchmark](https://github.com/Erriez/ErriezTM1637/blob/master/examples/Benchmark/Benchmark.ino) example:
 
 | Board                |  CLK   | Read keys | Write Byte | Write 16 Bytes buffer | Clear display |
 | -------------------- | :----: | :-------: | :--------: | :-------------------: | :-----------: |
@@ -149,7 +149,7 @@ Output [Benchmark](https://github.com/Erriez/ErriezTM1638/blob/master/examples/B
 
 ## Library dependencies
 
-- The [Benchmark](https://github.com/Erriez/ErriezTM1638/blob/master/examples/Benchmark/Benchmark.ino) example uses [Erriez Timestamp](https://github.com/Erriez/ErriezTimestamp) library.
+- The [Benchmark](https://github.com/Erriez/ErriezTM1637/blob/master/examples/Benchmark/Benchmark.ino) example uses [Erriez Timestamp](https://github.com/Erriez/ErriezTimestamp) library.
 
 ## Documentation
 
