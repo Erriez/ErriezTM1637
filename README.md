@@ -30,14 +30,14 @@ The following TM1637 pins should be connected to LED's and buttons in a matrix:
 * K1~K2 (Key-scan data input to read one key press after each other)
 * SEG/GRID (Output for LED matrix)
 
-### Pins
+## Pins
 
-| Pin  | TM1637 | Arduino UNO / Nano / Pro Micro / Mega2560 / Leonardo | WeMos D1 & R2 / Node MCU | WeMos LOLIN32 |
-| :--: | :----: | :--------------------------------------------------: | :----------------------: | :-----------: |
-|  1   |  VCC   |                     5V (or 3.3V)                     |           GND            |      GND      |
-|  2   |  GND   |                         GND                          |           3V3            |      3V3      |
-|  3   |  CLK   |                   2 (Digital pin)                    |            D2            |       0       |
-|  4   |  DIO   |                   3 (Digital pin)                    |            D3            |       4       |
+| Pin  | TM1637 | Arduino UNO / Nano / Micro / Pro Micro / Leonardo / Mega2560 | WeMos D1 & R2 / Node MCU | WeMos LOLIN32 |
+| :--: | :----: | :----------------------------------------------------------: | :----------------------: | :-----------: |
+|  1   |  VCC   |                         5V (or 3.3V)                         |           3V3            |      3V3      |
+|  2   |  GND   |                             GND                              |           GND            |      GND      |
+|  3   |  CLK   |                       2 (DIGITAL pin)                        |            D2            |       0       |
+|  4   |  DIO   |                       3 (DIGITAL pin)                        |            D3            |       4       |
 
 * Check maximum regulator / diode current to prevent a burnout when using lots of LED's. Some boards can provide only 100mA, others 800mA max.
 
