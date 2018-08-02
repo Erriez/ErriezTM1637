@@ -22,33 +22,34 @@
  * SOFTWARE.
  */
 
-/* TM1638 library for Arduino
- * https://github.com/Erriez/ErriezTM1638
+/*!
+ * \file TM1637.ino
+ * \brief TM1637 example for Arduino
+ * \details
+ *      Source:         https://github.com/Erriez/ErriezTM1637
+ *      Documentation:  https://erriez.github.io/ErriezTM1637
  */
 
 #include <Arduino.h>
-#include <TM1638.h>
+#include <TM1637.h>
 
 // Connect display pins to the Arduino DIGITAL pins
-#if defined(ARDUINO_AVR_UNO) || defined(ARDUINO_AVR_NANO) || defined(ARDUINO_AVR_MICRO) || \
-    defined(ARDUINO_AVR_PRO) || defined(ARDUINO_AVR_MEGA2560) || defined(ARDUINO_AVR_LEONARDO)
-#define TM1638_SCL_PIN      2
-#define TM1638_DIO_PIN      3
-#define TM1638_STB0_PIN     4
-#elif defined(ARDUINO_ESP8266_WEMOS_D1MINI) || defined(ARDUINO_ESP8266_NODEMCU)
-#define TM1638_SCL_PIN      D2
-#define TM1638_DIO_PIN      D3
-#define TM1638_STB0_PIN     D4
+#if defined(ARDUINO_ARCH_AVR)
+#define TM1637_CLK_PIN      2
+#define TM1637_DIO_PIN      3
+#elif defined(ARDUINO_ESP8266_WEMOS_D1MINI) || defined(ESP8266_WEMOS_D1MINI) || defined(ARDUINO_ESP8266_NODEMCU)
+#define TM1637_CLK_PIN      D2
+#define TM1637_DIO_PIN      D3
 #elif defined(ARDUINO_LOLIN32)
-#define TM1638_SCL_PIN      0
-#define TM1638_DIO_PIN      4
-#define TM1638_STB0_PIN     5
+#define TM1637_CLK_PIN      0
+#define TM1637_DIO_PIN      4
 #else
 #error "May work, but not tested on this target"
 #endif
 
-// Create tm1638 object
-TM1638 tm1638(TM1638_SCL_PIN, TM1638_DIO_PIN, TM1638_STB0_PIN);
+TM1637 tm1637(TM1637_CLK_PIN, TM1637_DIO_PIN);
+
+static uint8_t keysLast = 0;
 
 
 void setup()
@@ -57,35 +58,34 @@ void setup()
     while (!Serial) {
         ;
     }
-    Serial.println(F("TM1638 example"));
+    Serial.println(F("TM1637 example"));
 
-    // Initialize TM1638
-    tm1638.begin();
+    // Initialize TM1637
+    tm1637.begin();
 
     // Turn display off (All LED's off)
-    tm1638.displayOff();
+    tm1637.displayOff();
 
     // Clear display
-    tm1638.clear();
+    tm1637.clear();
 
     // Set brightness 0..7
-    tm1638.setBrightness(3);
+    tm1637.setBrightness(3);
 
     // Turn display on
-    tm1638.displayOn();
+    tm1637.displayOn();
 
     // Write segment LED's to the first display registers 0x00..0x0F with value 0x00..0xff to
     // display numbers and characters. Just an example which depends on the hardware:
-    tm1638.writeData(0x01, 0x01);
+    tm1637.writeData(0x01, 0x01);
 }
 
 void loop()
 {
-    static uint32_t keysLast = 0;
-    uint32_t keys;
+    uint8_t keys;
 
-    // Read 32-bit keys
-    keys = tm1638.getKeys();
+    // Read 8-bit keys
+    keys = tm1637.getKeys();
 
     // Check key down
     if (keysLast != keys) {
@@ -94,12 +94,12 @@ void loop()
         Serial.print(F("Keys: 0x"));
         Serial.println(keys, HEX);
 
-        if (keys) {
+        if (keys == 0xFF) {
             // Write segment LED's to first display register
-            tm1638.writeData(0, 0b00111111);
+            tm1637.writeData(0, 0b00111111);
         } else {
             // Write segment LED's to first display register
-            tm1638.writeData(0, 0b00000110);
+            tm1637.writeData(0, 0b00000110);
         }
     }
 }

@@ -12,7 +12,7 @@ elseif(UNIX)
 endif()
 
 # Configure one sketch
-set(SKETCH      examples/Example/Example.ino)
+set(SKETCH examples/TM1637/TM1637.ino)
 
 # Configure board, default Arduino UNO
 set(BOARD       uno)

@@ -56,7 +56,9 @@ The TM1637 communicates with a MCU serial by using two wires:
 
 ## Example
 
-* Examples | Erriez TM1637 | [Example](https://github.com/Erriez/ErriezTM1637/blob/master/examples/Example/Example.ino)
+Arduino IDE | Examples | Erriez TM1637 button and LED driver:
+
+[TM1637](https://github.com/Erriez/ErriezTM1637/blob/master/examples/TM1637/TM1637.ino)
 
 
 ## Documentation
