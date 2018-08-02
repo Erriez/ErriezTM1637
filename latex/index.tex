@@ -1,0 +1,223 @@
+\href{https://travis-ci.org/Erriez/ErriezTM1637}{\tt }
+
+This is a 2-\/pin serial \hyperlink{class_t_m1637}{T\+M1637} chip library for Arduino, optimized for size and speed. It supports a combined L\+ED driver controller and key-\/scan interface to detect one key press.
+
+
+
+\subsection*{Chip features}
+
+
+\begin{DoxyItemize}
+\item Power C\+M\+OS process
+\item Display mode (8 segments × 6 digits), support common anode L\+ED output
+\item Key scan (8 x 2-\/bit), enhanced anti-\/jamming button recognition circuit
+\item Brightness adjustment circuit (adjustable duty cycle 8)
+\item Two-\/wire serial interface (C\+LK, D\+IO)
+\item Oscillation mode\+: Built-\/in RC oscillator
+\item Built-\/in power-\/on reset circuit
+\item Built-\/in automatic blanking circuit
+\item Package\+: D\+I\+P20 / S\+O\+P20
+\end{DoxyItemize}
+
+\subsection*{Hardware}
+
+Connect power and 2 data pins to an Arduino board D\+I\+G\+I\+T\+AL pins\+:
+\begin{DoxyItemize}
+\item V\+DD (Power 3.\+3V -\/ 5V)
+\item G\+ND (Ground)
+\item C\+LK (Clock)
+\item D\+IO (Bi-\/directional data input/output)
+\end{DoxyItemize}
+
+The following \hyperlink{class_t_m1637}{T\+M1637} pins should be connected to L\+ED\textquotesingle{}s and buttons in a matrix\+:
+\begin{DoxyItemize}
+\item K1$\sim$\+K2 (Key-\/scan data input to read one key press after each other)
+\item S\+E\+G/\+G\+R\+ID (Output for L\+ED matrix)
+\end{DoxyItemize}
+
+\subsection*{Pins}
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*5{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\centering {\bf Pin }&\PBS\centering {\bf \hyperlink{class_t_m1637}{T\+M1637} }&\PBS\centering {\bf Arduino U\+NO / Nano / Micro / Pro Micro / Leonardo / Mega2560 }&\PBS\centering {\bf We\+Mos D1 \& R2 / Node M\+CU }&\PBS\centering {\bf We\+Mos L\+O\+L\+I\+N32  }\\\cline{1-5}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}\PBS\centering {\bf Pin }&\PBS\centering {\bf \hyperlink{class_t_m1637}{T\+M1637} }&\PBS\centering {\bf Arduino U\+NO / Nano / Micro / Pro Micro / Leonardo / Mega2560 }&\PBS\centering {\bf We\+Mos D1 \& R2 / Node M\+CU }&\PBS\centering {\bf We\+Mos L\+O\+L\+I\+N32  }\\\cline{1-5}
+\endhead
+\PBS\centering 1 &\PBS\centering V\+CC &\PBS\centering 5V (or 3.\+3V) &\PBS\centering 3\+V3 &\PBS\centering 3\+V3 \\\cline{1-5}
+\PBS\centering 2 &\PBS\centering G\+ND &\PBS\centering G\+ND &\PBS\centering G\+ND &\PBS\centering G\+ND \\\cline{1-5}
+\PBS\centering 3 &\PBS\centering C\+LK &\PBS\centering 2 (D\+I\+G\+I\+T\+AL pin) &\PBS\centering D2 &\PBS\centering 0 \\\cline{1-5}
+\PBS\centering 4 &\PBS\centering D\+IO &\PBS\centering 3 (D\+I\+G\+I\+T\+AL pin) &\PBS\centering D3 &\PBS\centering 4 \\\cline{1-5}
+\end{longtabu}
+
+\begin{DoxyItemize}
+\item Check maximum regulator / diode current to prevent a burnout when using lots of L\+ED\textquotesingle{}s. Some boards can provide only 100mA, others 800mA max.
+\end{DoxyItemize}
+
+\subsection*{Two-\/wire serial interface}
+
+The \hyperlink{class_t_m1637}{T\+M1637} communicates with a M\+CU serial by using two wires\+:
+
+
+\begin{DoxyItemize}
+\item D\+IO (bi-\/directional input/output pin)
+\item S\+CL (Clock pin)
+\end{DoxyItemize}
+
+{\bfseries Note\+:} The serial interface is not compatible with I2C or T\+WI, because no device address with read/write bit is used.
+
+\subsection*{Example}
+
+
+\begin{DoxyItemize}
+\item Examples $\vert$ Erriez \hyperlink{class_t_m1637}{T\+M1637} $\vert$ \href{https://github.com/Erriez/ErriezTM1637/blob/master/examples/Example/Example.ino}{\tt Example}
+\end{DoxyItemize}
+
+\subsection*{Documentation}
+
+
+\begin{DoxyItemize}
+\item \href{https://Erriez.github.io/ErriezTM1637}{\tt Doxygen online H\+T\+ML}
+\item \href{https://github.com/Erriez/ErriezTM1637/raw/gh-pages/latex/ErriezTM1637.pdf}{\tt Doxygen P\+DF}
+\item \href{https://github.com/Erriez/ErriezTM1637/blob/master/extras/TM1637_datasheet_chinese.pdf}{\tt T\+M1637 Datasheet (Chinese)}
+\end{DoxyItemize}
+
+\subsection*{Usage}
+
+{\bfseries Initialization}
+
+
+\begin{DoxyCode}
+1 \{c++\}
+2 // Include TM1637 library
+3 #include "TM1637.h"
+4 
+5 // Connect display pins to the Arduino DIGITAL pins
+6 #define TM1637\_CLK\_PIN   2
+7 #define TM1637\_DIO\_PIN   3
+8 
+9 // Create tm1637 object
+10 TM1637 tm1637(TM1637\_CLK\_PIN, TM1637\_DIO\_PIN);
+11 
+12 void setup()
+13 \{
+14     // Initialize TM1637
+15     tm1637.begin();
+16 \}
+\end{DoxyCode}
+
+
+{\bfseries Display on/off}
+
+
+\begin{DoxyCode}
+1 \{c++\}
+2 // Turn display off
+3 tm1637.displayOff();
+4 
+5 // Turn display on
+6 tm1637.displayOn();
+\end{DoxyCode}
+
+
+{\bfseries Turn all L\+ED\textquotesingle{}s off}
+
+
+\begin{DoxyCode}
+1 \{c++\}
+2 // Turn all LED's off
+3 tm1637.clear();
+\end{DoxyCode}
+
+
+{\bfseries Get keys}
+
+
+\begin{DoxyCode}
+1 \{c++\}
+2 // Get 8-bit key-scan
+3 uint8\_t keys = tm1637.getKeys();
+\end{DoxyCode}
+
+
+{\bfseries Write Byte to display register}
+
+
+\begin{DoxyCode}
+1 \{c++\}
+2 // Write segment LED's to the first display registers 0x00..0x0F with value 0x00..0xff to
+3 // display numbers and characters. Just an example which depends on the hardware:
+4 tm1637.writeData(0x01, 0x01);
+\end{DoxyCode}
+
+
+{\bfseries Write buffer to display registers}
+
+
+\begin{DoxyCode}
+1 \{c++\}
+2 // Creat buffer with LED's
+3 uint8\_t buf[] = \{ 0b10000110, 0b00111111, 0b00111111, 0b00111111, 0b00111111, 0b00111111\};
+4 
+5 // Write buffer to TM1637
+6 tm1637.writeData(0x00, buf, sizeof(buf));
+\end{DoxyCode}
+
+
+\subsection*{Optimized timing}
+
+The library uses optimized pin control for A\+VR targets. Other targets uses the default digital\+Read() and digital\+Write() pin control functions.
+
+Output \href{https://github.com/Erriez/ErriezTM1637/blob/master/examples/Benchmark/Benchmark.ino}{\tt Benchmark} example\+:
+
+\tabulinesep=1mm
+\begin{longtabu} spread 0pt [c]{*6{|X[-1]}|}
+\hline
+\rowcolor{\tableheadbgcolor}{\bf Board }&\PBS\centering {\bf C\+LK }&\PBS\centering {\bf Read keys }&\PBS\centering {\bf Write Byte }&\PBS\centering {\bf Write 16 Bytes buffer }&\PBS\centering {\bf Clear display  }\\\cline{1-6}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\rowcolor{\tableheadbgcolor}{\bf Board }&\PBS\centering {\bf C\+LK }&\PBS\centering {\bf Read keys }&\PBS\centering {\bf Write Byte }&\PBS\centering {\bf Write 16 Bytes buffer }&\PBS\centering {\bf Clear display  }\\\cline{1-6}
+\endhead
+Pro Mini 8\+M\+Hz &\PBS\centering 84k\+Hz &\PBS\centering 352us &\PBS\centering 344us &\PBS\centering 1080us &\PBS\centering 1072us \\\cline{1-6}
+U\+NO 16\+M\+Hz &\PBS\centering 170k\+Hz &\PBS\centering 156us &\PBS\centering 152us &\PBS\centering 496us &\PBS\centering 480us \\\cline{1-6}
+We\+Mos D1 \& R2 80\+M\+Hz &\PBS\centering 205k\+Hz &\PBS\centering 261us &\PBS\centering 137us &\PBS\centering 396us &\PBS\centering 396us \\\cline{1-6}
+We\+Mos D1 \& R2 160\+M\+Hz &\PBS\centering 300k\+Hz &\PBS\centering 233us &\PBS\centering 96us &\PBS\centering 275us &\PBS\centering 271us \\\cline{1-6}
+\end{longtabu}
+\paragraph*{Arduino Pro-\/\+Mini 8\+M\+Hz}
+
+
+
+\paragraph*{Arduino U\+NO 16\+M\+Hz}
+
+
+
+\paragraph*{We\+Mos D1 \& R2 80\+M\+Hz}
+
+
+
+\paragraph*{We\+Mos D1 \& R2 160\+M\+Hz}
+
+
+
+\subsection*{Library dependencies}
+
+
+\begin{DoxyItemize}
+\item The \href{https://github.com/Erriez/ErriezTM1637/blob/master/examples/Benchmark/Benchmark.ino}{\tt Benchmark} example uses \href{https://github.com/Erriez/ErriezTimestamp}{\tt Erriez Timestamp} library.
+\end{DoxyItemize}
+
+\subsection*{Library installation}
+
+Please refer to the \href{https://github.com/Erriez/ErriezArduinoLibrariesAndSketches/wiki}{\tt Wiki} page.
+
+\subsection*{Other Arduino Libraries and Sketches from Erriez}
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/Erriez/ErriezArduinoLibrariesAndSketches}{\tt Erriez Libraries and Sketches} 
+\end{DoxyItemize}
