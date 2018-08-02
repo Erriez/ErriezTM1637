@@ -23,9 +23,11 @@
  */
 
 /*!
- * \brief TM1637 library for Arduino
- * \details Source: https://github.com/Erriez/ErriezTM1637
  * \file TM1637.h
+ * \brief TM1637 library for Arduino
+ * \details
+ *      Source:         https://github.com/Erriez/ErriezTM1637
+ *      Documentation:  https://erriez.github.io/ErriezTM1637
  * \verbatim
    Command / register definitions
 

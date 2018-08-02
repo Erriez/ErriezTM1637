@@ -26,7 +26,8 @@
  * \file Example.ino
  * \brief TM1637 library for Arduino
  * \details
- *    Source: https://github.com/Erriez/ErriezTM1637
+ *      Source:         https://github.com/Erriez/ErriezTM1637
+ *      Documentation:  https://erriez.github.io/ErriezTM1637
  */
 
 #include <Arduino.h>

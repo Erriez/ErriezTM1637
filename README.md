@@ -5,6 +5,7 @@ This is a 2-pin serial TM1637 chip library for Arduino, optimized for size and s
 
 ![TM1637 chip](https://raw.githubusercontent.com/Erriez/ErriezTM1637/master/extras/TM1637_pins.jpg)
 
+
 ## Chip features
 
 - Power CMOS process
@@ -30,6 +31,7 @@ The following TM1637 pins should be connected to LED's and buttons in a matrix:
 * K1~K2 (Key-scan data input to read one key press after each other)
 * SEG/GRID (Output for LED matrix)
 
+
 ## Pins
 
 | Pin  | TM1637 | Arduino UNO / Nano / Micro / Pro Micro / Leonardo / Mega2560 | WeMos D1 & R2 / Node MCU | WeMos LOLIN32 |
@@ -41,6 +43,7 @@ The following TM1637 pins should be connected to LED's and buttons in a matrix:
 
 * Check maximum regulator / diode current to prevent a burnout when using lots of LED's. Some boards can provide only 100mA, others 800mA max.
 
+
 ## Two-wire serial interface
 
 The TM1637 communicates with a MCU serial by using two wires:
@@ -50,9 +53,18 @@ The TM1637 communicates with a MCU serial by using two wires:
 
 **Note:** The serial interface is not compatible with I2C or TWI, because no device address with read/write bit is used.
 
+
 ## Example
 
 * Examples | Erriez TM1637 | [Example](https://github.com/Erriez/ErriezTM1637/blob/master/examples/Example/Example.ino)
+
+
+## Documentation
+
+- [Doxygen online HTML](https://Erriez.github.io/ErriezTM1637)
+- [Doxygen PDF](https://github.com/Erriez/ErriezTM1637/raw/gh-pages/latex/ErriezTM1637.pdf)
+- [TM1637 Datasheet (Chinese)](https://github.com/Erriez/ErriezTM1637/blob/master/extras/TM1637_datasheet_chinese.pdf)
+
 
 ## Usage
 
@@ -151,15 +163,11 @@ Output [Benchmark](https://github.com/Erriez/ErriezTM1637/blob/master/examples/B
 
 - The [Benchmark](https://github.com/Erriez/ErriezTM1637/blob/master/examples/Benchmark/Benchmark.ino) example uses [Erriez Timestamp](https://github.com/Erriez/ErriezTimestamp) library.
 
-## Documentation
-
-- [Doxygen online HTML](https://Erriez.github.io/ErriezTM1637)
-- [Doxygen PDF](https://github.com/Erriez/ErriezTM1637/raw/master/docs/latex/refman.pdf)
-- [TM1637 Datasheet (Chinese)](https://github.com/Erriez/ErriezTM1637/blob/master/extras/TM1637_datasheet_chinese.pdf)
 
 ## Library installation
 
 Please refer to the [Wiki](https://github.com/Erriez/ErriezArduinoLibrariesAndSketches/wiki) page.
+
 
 ## Other Arduino Libraries and Sketches from Erriez
 
