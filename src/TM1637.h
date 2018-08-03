@@ -143,15 +143,15 @@ class TM1637
 public:
     TM1637(uint8_t clkPin, uint8_t dioPin, bool displayOn=true, uint8_t brightness=5);
 
-    virtual void begin();
-    virtual void end();
-    virtual void displayOn();
-    virtual void displayOff();
-    virtual void setBrightness(uint8_t brightness);
-    virtual void clear();
-    virtual void writeData(uint8_t address, uint8_t data);
-    virtual void writeData(uint8_t address, const uint8_t *buf, uint8_t len);
-    virtual uint8_t getKeys();
+    void begin();
+    void end();
+    void displayOn();
+    void displayOff();
+    void setBrightness(uint8_t brightness);
+    void clear();
+    void writeData(uint8_t address, uint8_t data);
+    void writeData(uint8_t address, const uint8_t *buf, uint8_t len);
+    uint8_t getKeys();
 
 protected:
 #ifdef __AVR
@@ -169,12 +169,12 @@ protected:
     bool    _displayOn;  //!< Display on and off status for display control register
     uint8_t _brightness; //!< Display brightness for display control register
 
-    virtual void writeDisplayControl();
-    virtual void writeCommand(uint8_t cmd);
-    virtual void start();
-    virtual void stop();
-    virtual void writeByte(uint8_t data);
-    virtual uint8_t readByte();
+    void writeDisplayControl();
+    void writeCommand(uint8_t cmd);
+    void start();
+    void stop();
+    void writeByte(uint8_t data);
+    uint8_t readByte();
 };
 
 #endif // TM1637_H__
