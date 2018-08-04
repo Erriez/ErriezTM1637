@@ -29,7 +29,6 @@
  *      Documentation:  https://erriez.github.io/ErriezTM1637
  */
 
-#include <Arduino.h>
 #include <ErriezTM1637.h>
 
 // Connect display pins to the Arduino DIGITAL pins
