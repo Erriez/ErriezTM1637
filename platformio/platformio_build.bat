@@ -12,3 +12,5 @@ rem git pull
 rem Build example(s)
 platformio ci --lib=".." --project-conf=platformio.ini ../examples/Benchmark/Benchmark.ino
 platformio ci --lib=".." --project-conf=platformio.ini ../examples/TM1637/TM1637.ino
+
+@pause
