@@ -74,7 +74,7 @@ Arduino IDE | Examples | Erriez TM1637 button and LED driver:
 
 ```c++
 // Include TM1637 library
-#include "TM1637.h"
+#include <ErriezTM1637.h>
   
 // Connect display pins to the Arduino DIGITAL pins
 #define TM1637_CLK_PIN   2

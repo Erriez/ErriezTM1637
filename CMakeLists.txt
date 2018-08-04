@@ -52,9 +52,9 @@ include_directories(${TIMESTAMP_SRC_DIR})
 generate_arduino_library(
         ${PROJECT_NAME}Lib
         SRCS
-            ${LIB_SRC_DIR}/TM1637.cpp
+            ${LIB_SRC_DIR}/ErriezTM1637.cpp
         HDRS
-            ${LIB_SRC_DIR}/TM1637.h
+            ${LIB_SRC_DIR}/ErriezTM1637.h
 )
 
 # Configure project
