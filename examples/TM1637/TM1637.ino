@@ -23,7 +23,6 @@
  */
 
 /*!
- * \file TM1637.ino
  * \brief TM1637 example for Arduino
  * \details
  *      Source:         https://github.com/Erriez/ErriezTM1637
