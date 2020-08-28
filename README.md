@@ -58,13 +58,13 @@ The TM1637 communicates with a MCU serial by using two wires:
 
 Arduino IDE | Examples | Erriez TM1637 button and LED driver:
 
-[TM1637](https://github.com/Erriez/ErriezTM1637/blob/master/examples/TM1637/TM1637.ino)
+[ErriezTM1637](https://github.com/Erriez/ErriezTM1637/blob/master/examples/ErriezTM1637/ErriezTM1637.ino)
 
 
 ## Documentation
 
 - [Doxygen online HTML](https://Erriez.github.io/ErriezTM1637)
-- [Doxygen PDF](https://github.com/Erriez/ErriezTM1637/raw/gh-pages/latex/ErriezTM1637.pdf)
+- [Doxygen PDF](https://github.com/Erriez/ErriezTM1637/raw/master/ErriezTM1637.pdf)
 - [TM1637 Datasheet (Chinese)](https://github.com/Erriez/ErriezTM1637/blob/master/extras/TM1637_datasheet_chinese.pdf)
 
 
@@ -163,7 +163,7 @@ Output [Benchmark](https://github.com/Erriez/ErriezTM1637/blob/master/examples/B
 
 ## Library dependencies
 
-- The [Benchmark](https://github.com/Erriez/ErriezTM1637/blob/master/examples/Benchmark/Benchmark.ino) example uses [Erriez Timestamp](https://github.com/Erriez/ErriezTimestamp) library.
+- The [Benchmark](https://github.com/Erriez/ErriezTM1637/blob/master/examples/ErriezTM1637Benchmark/ErriezTM1637Benchmark.ino) example uses [Erriez Timestamp](https://github.com/Erriez/ErriezTimestamp) library.
 
 
 ## Library installation
