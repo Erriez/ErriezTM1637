@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['tm1637_5fclk_5fhigh',['TM1637_CLK_HIGH',['../_erriez_t_m1637_8h.html#ab8ff7b5b5a202cd0d2f9100ac90934cc',1,'ErriezTM1637.h']]],
-  ['tm1637_5fclk_5finput',['TM1637_CLK_INPUT',['../_erriez_t_m1637_8h.html#aaa298b5a7e7269918462ccf92f64ada3',1,'ErriezTM1637.h']]],
-  ['tm1637_5fclk_5flow',['TM1637_CLK_LOW',['../_erriez_t_m1637_8h.html#af3f5771f24fe214d3b00f40159ab3a24',1,'ErriezTM1637.h']]],
-  ['tm1637_5fclk_5foutput',['TM1637_CLK_OUTPUT',['../_erriez_t_m1637_8h.html#a9cd0a834dfa5ca754cbc2754f5e1a9de',1,'ErriezTM1637.h']]],
+  ['tm1637_5fclk_5fhigh',['TM1637_CLK_HIGH',['../_erriez_t_m1637_8h.html#a993bb8295507d8b5a8daa7da3b4fce2b',1,'ErriezTM1637.h']]],
+  ['tm1637_5fclk_5finput',['TM1637_CLK_INPUT',['../_erriez_t_m1637_8h.html#a632d180bee99f5383d0af620476ebd0f',1,'ErriezTM1637.h']]],
+  ['tm1637_5fclk_5flow',['TM1637_CLK_LOW',['../_erriez_t_m1637_8h.html#a7e812c4b02f6786c6b41785a84476e0e',1,'ErriezTM1637.h']]],
+  ['tm1637_5fclk_5foutput',['TM1637_CLK_OUTPUT',['../_erriez_t_m1637_8h.html#a1233427708731809fbbd5b77ccab1947',1,'ErriezTM1637.h']]],
   ['tm1637_5fcmd_5faddr',['TM1637_CMD_ADDR',['../_erriez_t_m1637_8h.html#a72ed7937b962d84d87408d07378bdbb0',1,'ErriezTM1637.h']]],
   ['tm1637_5fcmd_5fctrl',['TM1637_CMD_CTRL',['../_erriez_t_m1637_8h.html#a6a4da8d86836db19fbe47c02cdca6edb',1,'ErriezTM1637.h']]],
   ['tm1637_5fcmd_5fdata',['TM1637_CMD_DATA',['../_erriez_t_m1637_8h.html#af7f0da8c4f9e72aaac5d2e2e73f7e41e',1,'ErriezTM1637.h']]],
@@ -21,11 +21,11 @@ var searchData=
   ['tm1637_5fdata_5ffixed_5faddr',['TM1637_DATA_FIXED_ADDR',['../_erriez_t_m1637_8h.html#ae69b24c95f5ad610a6ed6e7bbb7fe91e',1,'ErriezTM1637.h']]],
   ['tm1637_5fdata_5fread_5fkeys',['TM1637_DATA_READ_KEYS',['../_erriez_t_m1637_8h.html#abead748b670b7c8c03c7381f0b528b85',1,'ErriezTM1637.h']]],
   ['tm1637_5fdata_5fwrite',['TM1637_DATA_WRITE',['../_erriez_t_m1637_8h.html#ab126c531baf6443d517f92936123832b',1,'ErriezTM1637.h']]],
-  ['tm1637_5fdio_5fhigh',['TM1637_DIO_HIGH',['../_erriez_t_m1637_8h.html#a50b6617039dc3fef969949e5603140bc',1,'ErriezTM1637.h']]],
-  ['tm1637_5fdio_5finput',['TM1637_DIO_INPUT',['../_erriez_t_m1637_8h.html#a907da0bd537fcb11e709573ad1fc7d84',1,'ErriezTM1637.h']]],
-  ['tm1637_5fdio_5flow',['TM1637_DIO_LOW',['../_erriez_t_m1637_8h.html#ab6a807d34d6ab0f295b4d59101902d48',1,'ErriezTM1637.h']]],
-  ['tm1637_5fdio_5foutput',['TM1637_DIO_OUTPUT',['../_erriez_t_m1637_8h.html#abd3bb062a20931953df09f94a70d594a',1,'ErriezTM1637.h']]],
-  ['tm1637_5fdio_5fread',['TM1637_DIO_READ',['../_erriez_t_m1637_8h.html#a736bc5099b5a5636317368f5daa91e1d',1,'ErriezTM1637.h']]],
+  ['tm1637_5fdio_5fhigh',['TM1637_DIO_HIGH',['../_erriez_t_m1637_8h.html#a39fa38abebdbf60a496b42ac50915bfa',1,'ErriezTM1637.h']]],
+  ['tm1637_5fdio_5finput',['TM1637_DIO_INPUT',['../_erriez_t_m1637_8h.html#a7d0a6edd663463a809ce9ccbaf8ed186',1,'ErriezTM1637.h']]],
+  ['tm1637_5fdio_5flow',['TM1637_DIO_LOW',['../_erriez_t_m1637_8h.html#ad605c74a0b168607e2b9e04a815bfef4',1,'ErriezTM1637.h']]],
+  ['tm1637_5fdio_5foutput',['TM1637_DIO_OUTPUT',['../_erriez_t_m1637_8h.html#a0f2437fe37995e61d10376b3c8ed9cd0',1,'ErriezTM1637.h']]],
+  ['tm1637_5fdio_5fread',['TM1637_DIO_READ',['../_erriez_t_m1637_8h.html#ac874b950885c84462a84aa49dd0d443e',1,'ErriezTM1637.h']]],
   ['tm1637_5fnum_5fgrids',['TM1637_NUM_GRIDS',['../_erriez_t_m1637_8h.html#a7225a43b92efb32b4b48c8da97287eb6',1,'ErriezTM1637.h']]],
-  ['tm1637_5fpin_5fdelay',['TM1637_PIN_DELAY',['../_erriez_t_m1637_8h.html#ab7aa34c23485ec7b6ae4181c6de53761',1,'ErriezTM1637.h']]]
+  ['tm1637_5fpin_5fdelay',['TM1637_PIN_DELAY',['../_erriez_t_m1637_8h.html#addf55ece24b805fcde81a378e1dedbdd',1,'ErriezTM1637.h']]]
 ];
